@@ -21,7 +21,7 @@ function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
 <p>Iniciando o projeto. Primeiro commit incoming!</p>
 
 
-<h2>Hello {user}!</h2> 
+<h2>Hello, {user}!</h2> 
 
 <input type="text" value={user} onChange={handleInputChange} placeholder="Your name" />
   </div>
