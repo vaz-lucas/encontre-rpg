@@ -22,7 +22,7 @@ return (
 
 <h2>Hello, {user}!</h2> 
 
-<input type="text" value={user} onChange={handleInputChange} placeholder="Your name" />
+<input className="bg-white" type="text" value={user} onChange={handleInputChange} placeholder="Your name" />
   </div>
    </>
   )
