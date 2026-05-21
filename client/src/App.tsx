@@ -1,29 +1,22 @@
 import './App.css'
-import { useState } from 'react'
+import { Greet } from './components/Greet'
 
 function App() {
 
-function greet(person: string) {
-  console.log(`Hello, ${person}!`)
-  return `Hello, ${person}!`
-}
 
-const [user, setUser] = useState('User')
-
-function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-  setUser(event.target.value)
-}
 
   return (
     <>
-  <div>
-<h1>{greet('world')}</h1>
-<p>Iniciando o projeto. Primeiro commit incoming!</p>
+    <div className='title'>
+      <h1 className="text-9xl">Encontre RPG</h1>
+  <h2>Aqui você terá ajuda para encontrar RPGs independentes e eventos presenciais (e online)</h2>
+  </div>
 
-
-<h2>Hello {user}!</h2> 
-
-<input type="text" value={user} onChange={handleInputChange} placeholder="Your name" />
+    <div>
+      <div className='col-esquerda'></div>  
+<Greet />
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGVtN29ydTB5dHE3YzdlMmd3azFhenlxZTMzcnpsY3NwbGcyZnlqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lsJCkIKV6AT28/giphy.gif" alt="gif" className='gif' />
+<div className='col-direita'></div>
   </div>
    </>
   )
