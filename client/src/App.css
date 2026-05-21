@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
-* {
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+  }
 
-ol, ul {
+  ol, ul {
     list-style: none;
+  }
+
+  body {
+    background-color: #e0d6d6;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 }

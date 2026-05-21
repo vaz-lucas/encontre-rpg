@@ -16,7 +16,7 @@ function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
 return (
     <>
   <div>
-<h1>{greet('world')}</h1>
+<h2>{greet('world')}</h2>
 <p>Iniciando o projeto. Primeiro commit incoming!</p>
 
 
