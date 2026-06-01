@@ -1,4 +1,5 @@
 import './App.css'
+import { Catalogo } from './components/Catalogo'
 import { Greet } from './components/Greet'
 
 function App() {
@@ -8,16 +9,22 @@ function App() {
   return (
     <>
     <div className='title'>
-      <h1 className="text-9xl">Encontre RPG</h1>
-  <h2>Aqui você terá ajuda para encontrar RPGs independentes e eventos presenciais (e online)</h2>
+      <h1 className="text-5xl text-center">Encontre RPG</h1>
+  <h2 className="text-center">Aqui você terá ajuda para encontrar RPGs independentes e eventos presenciais (e online)</h2>
   </div>
 
-    <div>
-      <div className='col-esquerda'></div>  
-<Greet />
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGVtN29ydTB5dHE3YzdlMmd3azFhenlxZTMzcnpsY3NwbGcyZnlqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lsJCkIKV6AT28/giphy.gif" alt="gif" className='gif' />
-<div className='col-direita'></div>
-  </div>
+    <div className='text-center flex flex-row justify-center items-center gap-4 flex-wrap'>
+      <div className='col-esquerda basis-sm'>esq</div>  
+
+{/* Centro */}
+      <div className='basis-lg'>
+        <Catalogo />
+        <Greet />
+      </div>
+
+
+<div className='col-direita basis-sm'>dir</div>
+     </div>
    </>
   )
 }
