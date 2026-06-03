@@ -15,7 +15,7 @@ function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
 
 return (
     <>
-  <div>
+  
 <h2>{greet('world')}</h2>
 <p>Iniciando o projeto. Primeiro commit incoming!</p>
 
@@ -23,7 +23,8 @@ return (
 <h2>Hello, {user}!</h2> 
 
 <input className="bg-white" type="text" value={user} onChange={handleInputChange} placeholder="Your name" />
-  </div>
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGVtN29ydTB5dHE3YzdlMmd3azFhenlxZTMzcnpsY3NwbGcyZnlqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lsJCkIKV6AT28/giphy.gif" alt="gif" className='gif' />
+  
    </>
   )
 
