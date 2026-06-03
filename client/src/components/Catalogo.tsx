@@ -1,21 +1,15 @@
-
+import { mockRpgs } from "../data/mockRpgs";
+import { RpgCard } from "./rpgCard";
 
 export function Catalogo() {
-
   return (
-    <>
-    <h2>Catálogo</h2>
-
-    <div className="text-center flex gap-2.5 flex-wrap">
-    {Array.from({ length: 10 }, (_, i) => (
-        <div key={i}>
-        <h3>Título {i + 1}</h3>
-        <p>content</p>
-        <p>tags</p>
-        </div>
-    ))}
-    </div>
-
-    </>
-  )
+    <section>
+      <h2 className="text-2xl font-bold mb-4">Catálogo</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {mockRpgs.map((rpg) => (
+          <RpgCard key={rpg.id} rpg={rpg} />
+        ))}
+      </div>
+    </section>
+  );
 }
