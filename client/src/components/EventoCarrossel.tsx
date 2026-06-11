@@ -24,7 +24,7 @@ export function EventoCarrossel() {
   };
 
   return (
-    <section className="relative w-5/6 overflow-hidden rounded-xl h-62.5 sm:h-auto sm:aspect-16/5">
+    <section className="relative w-full overflow-hidden rounded-xl h-62.5 sm:h-auto sm:aspect-16/5 sm:w-5/6">
       {mockEventos.map((ev, i) => (
         <div
           key={ev.id}
