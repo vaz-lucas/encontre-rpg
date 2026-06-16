@@ -1,6 +1,6 @@
 export function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b border-(--border) bg-(--bg)">
+    <nav className="flex items-center justify-between px-6 py-4 border-b border-(--border) bg-ameixa-dark text-areia">
       <a href="/" className="text-xl font-semibold text-(--text-h) tracking-tight">
         Encontre <span className="text-(--accent)">RPG</span>
       </a>

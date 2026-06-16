@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-areia: #e3b448;
+  --color-ameixa: #5b2a86;
+  --color-ameixa-dark: #2d1b33;
+  --color-creme: #f4ead5;
+}
+
 @layer base {
   *, *::before, *::after {
     box-sizing: border-box;
@@ -12,8 +19,8 @@
   }
 
   body {
-    background-color: #e0d6d6;
-    color: #000000;
+    background-color: var(--color-creme);
+    color: var(--color-black);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }

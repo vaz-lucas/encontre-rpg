@@ -11,12 +11,9 @@ function App() {
     <>
     <div className='title'>
       <Navbar />
-      <h2 className="text-center pt-6">Aqui você terá ajuda para encontrar RPGs independentes e eventos presenciais (e online)</h2>
     </div>
 
-    <div className="px-4 py-4">
       
-    </div>
 
     <div className='flex'>
       <Sidebar />
