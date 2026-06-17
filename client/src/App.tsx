@@ -10,7 +10,7 @@ import Home from './pages/Home'
 function App() {
   return (
     <>
-      <div className='title'>
+      <div className='title mb-15'>
         <Navbar />
       </div>
       <div className='flex'>
