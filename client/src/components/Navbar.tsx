@@ -1,22 +1,24 @@
+import { Link } from "react-router-dom";
+
 export function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b border-(--border) bg-(--bg)">
-      <a href="/" className="text-xl font-semibold text-(--text-h) tracking-tight">
+    <nav className="flex items-center justify-between px-6 py-4 border-b border-(--border) fixed top-0 left-0 right-0 z-50 bg-ameixa-dark text-areia">
+      <Link to="/" className="text-xl font-semibold text-(--text-h) tracking-tight">
         Encontre <span className="text-(--accent)">RPG</span>
-      </a>
+      </Link>
 
       <ul className="hidden md:flex gap-6 text-sm text-(--text)">
         <li>
-          <a href="/" className="hover:text-(--accent) transition-colors">Início</a>
+          <Link to="/" className="hover:text-(--accent) transition-colors">Início</Link>
         </li>
         <li>
-          <a href="/catalogo" className="hover:text-(--accent) transition-colors">Catálogo</a>
+          <Link to="/catalogo" className="hover:text-(--accent) transition-colors">Catálogo</Link>
         </li>
         <li>
-          <a href="/eventos" className="hover:text-(--accent) transition-colors">Eventos</a>
+          <Link to="/eventos" className="hover:text-(--accent) transition-colors">Eventos</Link>
         </li>
         <li>
-          <a href="/sobre" className="hover:text-(--accent) transition-colors">Sobre</a>
+          <Link to="/sobre" className="hover:text-(--accent) transition-colors">Sobre</Link>
         </li>
       </ul>
 
