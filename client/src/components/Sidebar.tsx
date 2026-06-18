@@ -1,11 +1,6 @@
 import { mockEventos } from "../data/mockEventos";
-
-const navLinks = [
-  { label: "Início", href: "/" },
-  { label: "Catálogo", href: "/catalogo" },
-  { label: "Eventos", href: "/eventos" },
-  { label: "Sobre", href: "/sobre" },
-];
+import { NavLinks } from "../data/Links";
+import { Link } from "react-router";
 
 const popularTags = [
   "OSR", "PbtA", "horror", "fantasia", "solo",
@@ -16,19 +11,14 @@ export function Sidebar() {
   return (
     <aside className="hidden lg:flex fixed h-full  top-15 size-lvw font-mono flex-col gap-6 w-52 shrink-0 px-4 py-6 text-sm bg-ameixa-light text-areia">
       <nav>
-        <p className="text-xs font-semibold uppercase tracking-widest text-(--text) mb-3">Menu</p>
-        <ul className="flex flex-col gap-1 font-medium">
-          {navLinks.map(({ label, href }) => (
-            <li key={href}>
-              <a
-                href={href}
-                className="block px-3 py-1.5 rounded-md text-(--text) hover:text-(--text-h) hover:bg-(--accent-bg) transition-colors"
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <p className="text-xl font-bold uppercase tracking-widest mb-4">Menu</p>
+<ul className="flex flex-col gap-3">
+  {NavLinks.map(({ label, href }) => (
+    <li key={href}>
+      <Link to={href} className="hover:border-l-4 border-areia pl-3">{label}</Link>
+    </li>
+  ))}
+</ul>
       </nav>
 
       <div>
