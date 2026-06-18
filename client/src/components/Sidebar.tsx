@@ -14,7 +14,7 @@ const popularTags = [
 
 export function Sidebar() {
   return (
-    <aside className="hidden lg:flex sticky mt-15 top-15 h-[calc(100vh-4rem)] font-mono flex-col gap-6 w-52 shrink-0 px-4 py-6 text-sm bg-ameixa-light text-areia">
+    <aside className="hidden lg:flex fixed h-full  top-15 size-lvw font-mono flex-col gap-6 w-52 shrink-0 px-4 py-6 text-sm bg-ameixa-light text-areia">
       <nav>
         <p className="text-xs font-semibold uppercase tracking-widest text-(--text) mb-3">Menu</p>
         <ul className="flex flex-col gap-1 font-medium">
