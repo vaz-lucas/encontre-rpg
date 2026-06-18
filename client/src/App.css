@@ -4,8 +4,16 @@
   --color-areia: #e3b448;
   --color-ameixa: #5b2a86;
   --color-ameixa-dark: #2d1b33;
+  --color-ameixa-light: #3d2744;
   --color-creme: #f4ead5;
 }
+
+.theus{
+  color: #8a4dab;
+  background-color: #3d2744;
+
+}
+
 
 @layer base {
   *, *::before, *::after {
