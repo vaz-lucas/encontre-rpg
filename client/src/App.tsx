@@ -15,7 +15,7 @@ function App() {
       </div>
       <div className='flex min-h-screen'>
         <Sidebar />
-        <div className='flex-1 flex flex-col items-center pt-16'>
+        <div className='ml-52 flex-1 flex flex-col items-center pt-16'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/catalogo" element={<Catalogo />} />
