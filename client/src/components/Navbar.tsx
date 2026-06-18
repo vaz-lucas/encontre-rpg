@@ -3,22 +3,22 @@ import { Link } from "react-router-dom";
 export function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 py-4 fixed top-0 left-0 right-0 z-50  bg-ameixa-dark text-areia">
-      <Link to="/" className="text-xl font-semibold text-(--text-h) tracking-tight">
+      <Link to="/" className="text-xl font-bold font-mono text-(--text-h) tracking-tight">
         Encontre <span className="text-(--accent)">RPG</span>
       </Link>
 
-      <ul className="hidden md:flex gap-6 text-sm text-(--text)">
+      <ul className="hidden md:flex gap-6 text-md font-mono font-semibold">
         <li>
-          <Link to="/" className="hover:text-(--accent) transition-colors">Início</Link>
+          <Link to="/" className="hover:border-b-5 hover:border-areia transition-colors py-4">Início</Link>
         </li>
         <li>
-          <Link to="/catalogo" className="hover:text-(--accent) transition-colors">Catálogo</Link>
+          <Link to="/catalogo" className="hover:border-b-5 hover:border-areia transition-colors py-4">Catálogo</Link>
         </li>
         <li>
-          <Link to="/eventos" className="hover:text-(--accent) transition-colors">Eventos</Link>
+          <Link to="/eventos" className="hover:border-b-5 hover:border-areia transition-colors py-4">Eventos</Link>
         </li>
         <li>
-          <Link to="/sobre" className="hover:text-(--accent) transition-colors">Sobre</Link>
+          <Link to="/sobre" className="hover:border-b-5 hover:border-areia transition-colors py-4">Sobre</Link>
         </li>
       </ul>
 
