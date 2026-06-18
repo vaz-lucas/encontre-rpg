@@ -1,4 +1,4 @@
-import { href, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { NavLinks } from "../data/Links";
 
 export function Navbar() {
