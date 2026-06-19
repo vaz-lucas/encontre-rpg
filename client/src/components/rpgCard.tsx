@@ -6,7 +6,7 @@ interface RpgCardProps {
 
 export function RpgCard({ rpg }: RpgCardProps) {
   return (
-    <article className="border rounded-lg min-w-3xs overflow-hidden hover:shadow-lg transition-shadow lg:max-w-sm ">
+    <article className="border cursor-pointer rounded-lg min-w-3xs overflow-hidden hover:shadow-lg transition-shadow lg:max-w-sm ">
       <img
         src={rpg.coverUrl}
         alt={`Capa de ${rpg.name}`}
