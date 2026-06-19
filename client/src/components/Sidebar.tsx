@@ -1,11 +1,8 @@
 import { mockEventos } from "../data/mockEventos";
 import { NavLinks } from "../data/Links";
 import { Link } from "react-router";
+import { tagsPopulares } from "../data/Tags";
 
-const popularTags = [
-  "OSR", "PbtA", "horror", "fantasia", "solo",
-  "one-shot", "sci-fi", "narrativo", "cozy", "minimalista",
-];
 
 export function Sidebar() {
   return (
@@ -22,12 +19,12 @@ export function Sidebar() {
       </nav>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-widest text-(--text) mb-3">Tags populares</p>
+        <p className="text-xs font-semibold uppercase tracking-widest mb-3">Tags populares</p>
         <div className="flex flex-wrap gap-2">
-          {popularTags.map((tag) => (
+          {tagsPopulares.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded-full text-xs border border-(--accent-border) text-(--accent) bg-(--accent-bg) cursor-pointer hover:opacity-80 transition-opacity"
+              className="px-2 py-0.5 rounded-full text-xs border cursor-pointer hover:opacity-80 transition-opacity"
             >
               {tag}
             </span>

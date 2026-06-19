@@ -77,7 +77,7 @@ export function EventoCarrossel() {
             onClick={() => setCurrent(i)}
             aria-label={`Ir para evento ${i + 1}`}
             className="w-2 h-2 rounded-full transition-colors"
-            style={{ background: i === current ? "var(--accent)" : "rgba(255,255,255,0.5)" }}
+            style={{ background: i === current ? " " : "rgba(255,255,255,0.5)" }}
           />
         ))}
       </div>
