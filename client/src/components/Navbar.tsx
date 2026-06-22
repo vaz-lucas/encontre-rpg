@@ -3,7 +3,7 @@ import { NavLinks } from "../data/Links";
 
 export function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 fixed top-0 left-0 right-0 z-50  bg-ameixa-dark text-areia">
+    <nav className="flex items-center justify-between px-6 py-4 fixed top-0 left-0 right-0 z-50  bg-dark-coffee-900 text-dark-coffee-200 ">
       <Link to="/" className="text-xl font-bold font-mono tracking-tight">
         Encontre <span>RPG</span>
       </Link>
@@ -11,7 +11,7 @@ export function Navbar() {
     <ul className="hidden md:flex gap-6 text-md font-mono font-semibold">
     {NavLinks.map(({ label, href }) => (
     <li key={href}  >
-      <Link className="hover:border-b-5 hover:border-areia transition-colors py-4" to={href}>{label}</Link>
+      <Link className="hover:border-b-5 hover:border-dark-coffee-200 transition-colors py-4" to={href}>{label}</Link>
       </li>
       ))}
       </ul> 
