@@ -6,13 +6,13 @@ import { tagsPopulares } from "../data/Tags";
 
 export function Sidebar() {
   return (
-    <aside className="hidden lg:flex fixed h-full  top-15 size-lvw font-mono flex-col gap-6 w-52 shrink-0 px-4 py-6 text-sm bg-ameixa-light text-areia">
+    <aside className="hidden lg:flex fixed h-full  top-15 size-lvw font-mono flex-col gap-6 w-52 shrink-0 px-4 py-6 text-sm bg-dark-coffee-800 text-dark-coffee-200">
       <nav>
         <p className="text-xl font-bold uppercase tracking-widest mb-4">Menu</p>
 <ul className="flex flex-col gap-3">
   {NavLinks.map(({ label, href }) => (
     <li key={href}>
-      <Link to={href} className="hover:border-l-4 border-areia pl-3">{label}</Link>
+      <Link to={href} className="hover:border-l-4 border-dark-coffee-200 pl-3">{label}</Link>
     </li>
   ))}
 </ul>

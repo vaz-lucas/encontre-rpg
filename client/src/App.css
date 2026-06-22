@@ -6,29 +6,36 @@
   --color-ameixa-dark: #2d1b33;
   --color-ameixa-light: #3d2744;
   --color-creme: #f4ead5;
+  --color-dark-coffee-50: #faf5eb;
+  --color-dark-coffee-100: #f4ebd7;
+  --color-dark-coffee-200: #e9d7af;
+  --color-dark-coffee-300: #dec287;
+  --color-dark-coffee-400: #d3ae5f;
+  --color-dark-coffee-500: #c89a37;
+  --color-dark-coffee-600: #a07b2c;
+  --color-dark-coffee-700: #785c21;
+  --color-dark-coffee-800: #503e16;
+  --color-dark-coffee-900: #281f0b;
+  --color-dark-coffee-950: #1c1608;
 }
-
-.theus{
-  color: #8a4dab;
-  background-color: #3d2744;
-
-}
-
 
 @layer base {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
-  ol, ul {
+  ol,
+  ul {
     list-style: none;
   }
 
   body {
-    background-color: var(--color-creme);
+    background-color: var(--color-dark-coffee-100);
     color: var(--color-black);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 }
