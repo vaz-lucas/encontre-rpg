@@ -35,7 +35,7 @@
 
   body {
     background-color: var(--color-dark-coffee-100);
-    color: var(--color-black);
+    color: var(--color-dark-coffee-950);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 }
