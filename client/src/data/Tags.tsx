@@ -7,5 +7,4 @@ const tagsPopulares = [
   "OSR", "PbtA", "medieval", "cyberpunk", "narrativo", "horror",
 ];
 
-export default tags;
-export { tagsPopulares };
+export { tags, tagsPopulares };
