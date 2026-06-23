@@ -1,7 +1,7 @@
 import { Catalogo } from "../components/Catalogo";
 import { EventoCarrossel } from "../components/EventoCarrossel";
 
-function Home() {
+export function Home() {
   return (
     <>
       <EventoCarrossel />
@@ -9,5 +9,3 @@ function Home() {
     </>
   )
 }
-
-export default Home;

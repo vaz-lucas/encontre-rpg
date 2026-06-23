@@ -1,6 +1,6 @@
 import { Catalogo } from "../components/Catalogo";
 
-export default function CatalogoPage() {
+export function CatalogoPage() {
   return (
     <Catalogo />
   );
