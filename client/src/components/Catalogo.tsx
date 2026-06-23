@@ -1,5 +1,5 @@
 import { mockRpgs } from "../data/mockRpgs";
-import { RpgCard } from "./rpgCard";
+import { RpgCard } from "./RpgCard";
 
 export function Catalogo() {
   return (
