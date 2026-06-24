@@ -1,3 +1,6 @@
+import { PessoaBolha } from "../components/PessoaBolha";
+import { pessoas } from "../data/pessoas";
+
 export function SobrePage() {
   return (
     <div className="p-7">
@@ -12,10 +15,16 @@ export function SobrePage() {
         RPG é para qualquer pessoa que tiver interesse e há inúmeros estilos
         para serem explorados.
       </p>
-      {/* <div>
-    <h3>Membros</h3>
-    {pessoas.map((name,))}
-</div> */}
+      <div className="mt-15">
+        <h3 className="text-center font-mono pb-7 font-bold text-3xl">
+          Membros
+        </h3>
+        <div className="flex justify-center">
+          {pessoas.slice(0, 1).map((pessoa) => (
+            <PessoaBolha key={pessoa.id} pessoa={pessoa} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
