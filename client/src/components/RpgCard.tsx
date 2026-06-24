@@ -8,7 +8,7 @@ export function RpgCard({ rpg }: RpgCardProps) {
   return (
     <article className="cursor-pointer min-w-3xs overflow-hidden hover:shadow-lg transition-shadow lg:max-w-sm ">
       <img
-        src={rpg.coverUrl}
+        src={rpg.cover_url}
         alt={`Capa de ${rpg.name}`}
         className="w-full h-48 object-cover"
       />
