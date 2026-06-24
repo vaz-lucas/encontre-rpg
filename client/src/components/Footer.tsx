@@ -1,4 +1,4 @@
-import { NavLinks } from "../data/Links";
+import { NavLinks } from "../data/links";
 import { Link } from "react-router";
 
 export function Footer() {
