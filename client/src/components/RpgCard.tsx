@@ -17,7 +17,7 @@ export function RpgCard({ rpg }: RpgCardProps) {
         <p className="text-sm text-gray-600 mt-1">por {rpg.author}</p>
         <p className="mt-2 text-sm">{rpg.description}</p>
         <div className="flex flex-wrap gap-1 mt-3">
-          {rpg.tags.map((tag) => (
+          {(rpg.tags ?? []).map((tag) => (
             <span key={tag} className="text-xs bg-gray-100 px-2 py-1 rounded">
               {tag}
             </span>
