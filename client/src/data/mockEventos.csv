@@ -1,0 +1,4 @@
+name,date,time,location,description,duration,cover_url,is_featured
+Exemplo: Encontro RPG - Mörk Borg,2024-07-15,19:00,Bar do RPG - São Paulo,"Venha jogar Mörk Borg com a gente! Traga seus dados e prepare-se para uma noite de horror e doom metal.",one-shot,https://picsum.photos/seed/evento1/400/300,true
+Exemplo: Encontro RPG - Dungeon World,2024-07-20,18:00,Casa do RPG - Rio de Janeiro,"Participe do nosso encontro de Dungeon World! Jogue uma aventura épica de fantasia e narrativa com outros fãs do sistema PbtA.",campanha,https://picsum.photos/seed/evento2/400/300,true
+Exemplo: Encontro RPG - Ironsworn,2024-07-25,20:00,Clube do RPG - Belo Horizonte,"Junte-se a nós para jogar Ironsworn, o RPG de fantasia sombria que pode ser jogado solo, cooperativo ou com mestre. Traga seus amigos e venha se aventurar!",campanha,https://picsum.photos/seed/evento3/400/300,false

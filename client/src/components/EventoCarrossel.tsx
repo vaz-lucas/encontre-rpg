@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
-import { mockEventos } from "../data/mockEventos";
+import { useEventos } from "../hooks/useEventos";
 
 export function EventoCarrossel() {
   const [current, setCurrent] = useState(0);
-  const total = mockEventos.length;
+  const { eventos, loading, error } = useEventos();
+  const total = eventos.length;
 
   const next = useCallback(() => {
     setCurrent((c) => (c + 1) % total);
@@ -16,7 +17,9 @@ export function EventoCarrossel() {
     return () => clearInterval(timer);
   }, [next]);
 
-  const evento = mockEventos[current];
+  if (loading) return <p>Carregando...</p>;
+  if (total === 0) return null;
+  const evento = eventos[current];
 
   const formatDate = (dateStr: string) => {
     const [year, month, day] = dateStr.split("-");
@@ -25,14 +28,17 @@ export function EventoCarrossel() {
 
   return (
     <section className="relative w-full overflow-hidden lg:rounded-xl h-62.5 sm:h-auto sm:aspect-16/5 sm:w-5/6 mt-5 mb-5">
-      {mockEventos.map((ev, i) => (
+      {eventos.map((ev, i) => (
         <div
           key={ev.id}
           className="absolute inset-0 transition-opacity duration-700"
-          style={{ opacity: i === current ? 1 : 0, pointerEvents: i === current ? "auto" : "none" }}
+          style={{
+            opacity: i === current ? 1 : 0,
+            pointerEvents: i === current ? "auto" : "none",
+          }}
         >
           <img
-            src={ev.coverUrl}
+            src={ev.cover_url}
             alt={ev.name}
             className="w-full h-full object-cover"
           />
@@ -41,18 +47,25 @@ export function EventoCarrossel() {
       ))}
 
       <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 text-left pointer-events-none">
-        <span className="text-xs font-semibold uppercase tracking-widest mb-1 sm:mb-2" style={{ color: "var(--accent)" }}>
+        <span
+          className="text-xs font-semibold uppercase tracking-widest mb-1 sm:mb-2"
+          style={{ color: "var(--accent)" }}
+        >
           Evento em destaque
         </span>
         <h2 className="text-white text-xl sm:text-2xl font-bold leading-tight mb-1 drop-shadow">
           {evento.name}
         </h2>
         <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs sm:text-sm text-gray-200 mb-1 sm:mb-2">
-          <span>📅 {formatDate(evento.date)} às {evento.time}</span>
+          <span>
+            📅 {formatDate(evento.date)} às {evento.time}
+          </span>
           <span>📍 {evento.location}</span>
           <span className="capitalize">🎲 {evento.duration}</span>
         </div>
-        <p className="text-gray-300 text-xs sm:text-sm max-w-xl line-clamp-2 hidden sm:block">{evento.description}</p>
+        <p className="text-gray-300 text-xs sm:text-sm max-w-xl line-clamp-2 hidden sm:block">
+          {evento.description}
+        </p>
       </div>
 
       <button
@@ -71,13 +84,15 @@ export function EventoCarrossel() {
       </button>
 
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-        {mockEventos.map((_, i) => (
+        {eventos.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
             aria-label={`Ir para evento ${i + 1}`}
             className="w-2 h-2 rounded-full transition-colors"
-            style={{ background: i === current ? " " : "rgba(255,255,255,0.5)" }}
+            style={{
+              background: i === current ? " " : "rgba(255,255,255,0.5)",
+            }}
           />
         ))}
       </div>
