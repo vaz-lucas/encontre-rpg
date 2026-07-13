@@ -6,9 +6,9 @@ interface RpgCardProps {
 
 export function RpgCard({ rpg }: RpgCardProps) {
   return (
-    <article className="cursor-pointer min-w-3xs overflow-hidden hover:shadow-lg transition-shadow lg:max-w-sm ">
+    <div className="cursor-pointer min-w-3xs overflow-hidden hover:shadow-lg transition-shadow lg:max-w-sm ">
       <img
-        src={rpg.coverUrl}
+        src={rpg.cover_url}
         alt={`Capa de ${rpg.name}`}
         className="w-full h-48 object-cover"
       />
@@ -17,13 +17,13 @@ export function RpgCard({ rpg }: RpgCardProps) {
         <p className="text-sm text-gray-600 mt-1">por {rpg.author}</p>
         <p className="mt-2 text-sm">{rpg.description}</p>
         <div className="flex flex-wrap gap-1 mt-3">
-          {rpg.tags.map((tag) => (
+          {(rpg.tags ?? []).map((tag) => (
             <span key={tag} className="text-xs bg-gray-100 px-2 py-1 rounded">
               {tag}
             </span>
           ))}
         </div>
       </div>
-    </article>
+    </div>
   );
 }

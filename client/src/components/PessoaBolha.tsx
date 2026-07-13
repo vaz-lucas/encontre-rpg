@@ -6,10 +6,7 @@ type PessoaBolhaProps = {
 
 export function PessoaBolha({ pessoa }: PessoaBolhaProps) {
   return (
-    <div
-      key={pessoa.id}
-      className="flex flex-col items-center text-center gap-2"
-    >
+    <div key={pessoa.id} className="flex flex-col items-center text-center">
       <a href={pessoa.site} target="_blank" rel="noopener noreferrer">
         <div>
           <img

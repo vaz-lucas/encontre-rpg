@@ -1,11 +1,11 @@
 export interface Evento {
   id: string;
   name: string;
-  date: string; 
-  time: string; 
+  date: string;
+  time: string;
   location: string;
   description: string;
-  duration: string; 
-  coverUrl: string;
-  isFeatured: boolean;
+  duration: string;
+  cover_url: string;
+  is_featured: boolean;
 }

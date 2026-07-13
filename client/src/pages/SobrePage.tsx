@@ -4,7 +4,7 @@ import { pessoas } from "../data/pessoas";
 export function SobrePage() {
   return (
     <div className="p-7">
-      <div className="flex font-bold justify-center py-5 text-4xl">
+      <div className="flex font-bold text-center justify-center py-5 text-4xl">
         <h2 className="font-mono">Sobre o projeto</h2>
       </div>
       <p>
