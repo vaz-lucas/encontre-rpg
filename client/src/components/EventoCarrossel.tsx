@@ -3,7 +3,7 @@ import { useEventos } from "../hooks/useEventos";
 
 export function EventoCarrossel() {
   const [current, setCurrent] = useState(0);
-  const { eventos, loading, error } = useEventos();
+  const { eventos, loading } = useEventos();
   const total = eventos.length;
 
   const next = useCallback(() => {

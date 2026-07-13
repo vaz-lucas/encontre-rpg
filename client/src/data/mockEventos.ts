@@ -10,8 +10,8 @@ export const mockEventos: Evento[] = [
     description:
       "Venha jogar Mörk Borg com a gente! Traga seus dados e prepare-se para uma noite de horror e doom metal.",
     duration: "one-shot",
-    coverUrl: "https://picsum.photos/seed/evento1/400/300",
-    isFeatured: true,
+    cover_url: "https://picsum.photos/seed/evento1/400/300",
+    is_featured: true,
   },
   {
     id: "2",
@@ -22,8 +22,8 @@ export const mockEventos: Evento[] = [
     description:
       "Participe do nosso encontro de Dungeon World! Jogue uma aventura épica de fantasia e narrativa com outros fãs do sistema PbtA.",
     duration: "campanha",
-    coverUrl: "https://picsum.photos/seed/evento2/400/300",
-    isFeatured: true,
+    cover_url: "https://picsum.photos/seed/evento2/400/300",
+    is_featured: true,
   },
   {
     id: "3",
@@ -34,7 +34,7 @@ export const mockEventos: Evento[] = [
     description:
       "Junte-se a nós para jogar Ironsworn, o RPG de fantasia sombria que pode ser jogado solo, cooperativo ou com mestre. Traga seus amigos e venha se aventurar!",
     duration: "campanha",
-    coverUrl: "https://picsum.photos/seed/evento3/400/300",
-    isFeatured: false,
+    cover_url: "https://picsum.photos/seed/evento3/400/300",
+    is_featured: false,
   },
 ];
