@@ -7,6 +7,7 @@ import { CatalogoPage } from "./pages/CatalogoPage";
 import { EventosPage } from "./pages/EventosPage";
 import { Footer } from "./components/Footer";
 import { SobrePage } from "./pages/SobrePage";
+import { LoginPage } from "./pages/LoginPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/catalogo" element={<CatalogoPage />} />
             <Route path="/eventos" element={<EventosPage />} />
             <Route path="/sobre" element={<SobrePage />} />
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </div>
       </div>
