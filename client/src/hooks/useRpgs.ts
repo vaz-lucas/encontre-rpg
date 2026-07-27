@@ -12,6 +12,7 @@ export function useRpgs() {
       const { data, error } = await supabase.from("rpgs").select("*");
 
       if (error) {
+        console.error("Erro ao buscar RPGs:", error);
         setError(error.message);
       } else {
         setRpgs(data as Rpg[]);

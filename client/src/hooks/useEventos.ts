@@ -12,6 +12,7 @@ export function useEventos() {
       const { data, error } = await supabase.from("events").select("*");
 
       if (error) {
+        console.log("Erro ao buscar eventos:", error);
         setError(error.message);
       } else {
         setEventos(data as Evento[]);
