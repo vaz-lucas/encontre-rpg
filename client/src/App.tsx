@@ -8,28 +8,31 @@ import { EventosPage } from "./pages/EventosPage";
 import { Footer } from "./components/Footer";
 import { SobrePage } from "./pages/SobrePage";
 import { LoginPage } from "./pages/LoginPage";
+import { LoginProvider } from "./context/LoginContext";
 
 function App() {
   return (
     <>
-      <div className="title">
-        <Navbar />
-      </div>
-      <div className="flex min-h-screen">
-        <Sidebar />
-        <div className="lg:ml-52 flex-1 flex flex-col items-center pt-16">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/catalogo" element={<CatalogoPage />} />
-            <Route path="/eventos" element={<EventosPage />} />
-            <Route path="/sobre" element={<SobrePage />} />
-            <Route path="/login" element={<LoginPage />} />
-          </Routes>
+      <LoginProvider>
+        <div className="title">
+          <Navbar />
         </div>
-      </div>
-      <div>
-        <Footer />
-      </div>
+        <div className="flex min-h-screen">
+          <Sidebar />
+          <div className="lg:ml-52 flex-1 flex flex-col items-center pt-16">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/catalogo" element={<CatalogoPage />} />
+              <Route path="/eventos" element={<EventosPage />} />
+              <Route path="/sobre" element={<SobrePage />} />
+              <Route path="/login" element={<LoginPage />} />
+            </Routes>
+          </div>
+        </div>
+        <div>
+          <Footer />
+        </div>
+      </LoginProvider>
     </>
   );
 }

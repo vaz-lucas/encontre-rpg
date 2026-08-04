@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { NavLinks } from "../data/links";
-import { LoginLine } from "./LoginLine";
+import { useLogin } from "../context/LoginContext";
 
 export function Navbar() {
+  const loginObject = useLogin();
+
   return (
     <nav className="flex items-center justify-between px-6 py-4 fixed top-0 left-0 right-0 z-50  bg-dark-coffee-900 text-dark-coffee-200 ">
       <Link to="/" className="text-xl font-bold font-mono tracking-tight">
@@ -21,12 +23,25 @@ export function Navbar() {
           </li>
         ))}
       </ul>
-      <Link
-        to="/login"
-        className="hidden md:block whitespace-nowrap border-b-5 border-transparent text-md transition-colors font-mono font-semibold"
-      >
-        Entrar
-      </Link>
+
+      {loginObject?.user?.id ? (
+        <>
+          <button
+            onClick={() => loginObject?.logout()}
+            className="hidden md:block whitespace-nowrap border-b-5 cursor-pointer border-transparent text-md transition-colors font-mono font-semibold"
+          >
+            Sair
+          </button>
+          <p>Olá, {loginObject?.user.email}</p>
+        </>
+      ) : (
+        <Link
+          to="/login"
+          className="hidden md:block whitespace-nowrap border-b-5 border-transparent text-md transition-colors font-mono font-semibold"
+        >
+          Entrar
+        </Link>
+      )}
 
       <button className="md:hidden" aria-label="Abrir menu">
         <svg
