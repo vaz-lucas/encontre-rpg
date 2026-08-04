@@ -1,11 +1,11 @@
 import { useState, type SyntheticEvent } from "react";
-import { useAuth } from "../hooks/useAuth";
+import { useLogin } from "../context/LoginContext";
 import { GithubIcon } from "../assets/GithubIcon";
 
 type Tab = "entrar" | "cadastrar";
 
 export function Login() {
-  const { loginWithGitHub, login, register } = useAuth();
+  const loginObject = useLogin();
   const [tab, setTab] = useState<Tab>("entrar");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,20 +14,23 @@ export function Login() {
 
   async function handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
+    if (!loginObject?.login) return;
+    if (!loginObject?.register) return;
     setError("");
 
     if (tab === "entrar") {
-      const { error } = await login(email, password);
+      const { error } = await loginObject.login(email, password);
       if (error) setError(error.message);
     } else {
-      const { error } = await register(email, password);
+      const { error } = await loginObject.register(email, password);
       if (error) setError(error.message);
       else setSucesso(true);
     }
   }
 
   async function handleGitHub() {
-    await loginWithGitHub();
+    if (!loginObject?.loginWithGitHub) return;
+    await loginObject.loginWithGitHub();
   }
 
   if (sucesso) {
@@ -60,7 +63,10 @@ export function Login() {
         <div className="flex border rounded-lg overflow-hidden text-sm font-semibold">
           <button
             type="button"
-            onClick={() => { setTab("entrar"); setError(""); }}
+            onClick={() => {
+              setTab("entrar");
+              setError("");
+            }}
             className={`flex-1 py-2 cursor-pointer transition-colors ${
               tab === "entrar"
                 ? "bg-dark-coffee-800 text-dark-coffee-100"
@@ -71,7 +77,10 @@ export function Login() {
           </button>
           <button
             type="button"
-            onClick={() => { setTab("cadastrar"); setError(""); }}
+            onClick={() => {
+              setTab("cadastrar");
+              setError("");
+            }}
             className={`flex-1 py-2 cursor-pointer transition-colors ${
               tab === "cadastrar"
                 ? "bg-dark-coffee-800 text-dark-coffee-100"
@@ -99,9 +108,7 @@ export function Login() {
             required
             className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2"
           />
-          {error && (
-            <p className="text-sm text-red-500">{error}</p>
-          )}
+          {error && <p className="text-sm text-red-500">{error}</p>}
           <button
             type="submit"
             className="w-full cursor-pointer py-2 rounded-lg text-sm font-semibold bg-dark-coffee-800 text-dark-coffee-100 hover:opacity-90 transition-opacity"

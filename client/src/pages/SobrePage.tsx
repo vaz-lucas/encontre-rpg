@@ -7,14 +7,17 @@ export function SobrePage() {
       <div className="flex font-bold text-center justify-center py-5 text-4xl">
         <h2 className="font-mono">Sobre o projeto</h2>
       </div>
-      <p>
-        O projeto é feito por uma pessoa apaixonada por RPG e programação, que
-        se esforça para divulgar o RPG indie para os mais diversos públicos.
-      </p>
-      <p>
-        RPG é para qualquer pessoa que tiver interesse e há inúmeros estilos
-        para serem explorados.
-      </p>
+      <div className="max-w-3xl">
+        <p>
+          O projeto é feito por uma pessoa apaixonada por RPG e programação, que
+          se esforça para divulgar o RPG indie para os mais diversos públicos.
+        </p>
+        <br />
+        <p>
+          RPG é para qualquer pessoa que tiver interesse e há inúmeros estilos
+          para serem explorados.
+        </p>
+      </div>
       <div className="mt-15">
         <h3 className="text-center font-mono pb-7 font-bold text-3xl">
           Membros

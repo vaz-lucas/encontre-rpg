@@ -1,9 +1,11 @@
-import { mockEventos } from "../data/mockEventos";
 import { NavLinks } from "../data/links";
 import { Link } from "react-router";
 import { tagsPopulares } from "../data/tags";
+import { useEventos } from "../hooks/useEventos";
 
 export function Sidebar() {
+  const { eventos, loading, error } = useEventos();
+
   return (
     <aside className="hidden lg:flex fixed h-full  top-15 size-lvw font-mono flex-col gap-6 w-52 shrink-0 px-4 py-6 text-sm bg-dark-coffee-800 text-dark-coffee-200">
       <nav>
@@ -39,7 +41,10 @@ export function Sidebar() {
       </div>
 
       <div>
-        {mockEventos.slice(0, 3).map((evento) => (
+        {loading && <p>Carregando...</p>}
+        {error && <p>Um erro ocorreu, tente novamente mais tarde</p>}
+        {}
+        {eventos.slice(0, 3).map((evento) => (
           <div key={evento.id} className="flex flex-col mb-5 pl-2 border-l-4">
             <div className="font-bold">{evento.name}</div>
             <div>{evento.location}</div>
