@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import { supabase } from "../lib/supabase";
 import type {
   AuthError,
@@ -10,7 +11,7 @@ import type {
 } from "@supabase/supabase-js";
 
 type Props = {
-  children: string | JSX.Element | JSX.Element[];
+  children: ReactNode;
 };
 
 type LoginObject = {
