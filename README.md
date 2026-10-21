@@ -1,21 +1,39 @@
 # Encontre RPG
 
-É um projeto que busca conectar os mestres e jogadores que buscam sistemas de RPG gratuitos e diferentes com sistemas de RPG independentes e novos.
+Conectamos jogadores e mestres de RPG a sistemas independentes e gratuitos, com um catálogo navegável e um quadro de eventos para experimentar sistemas novos com outras pessoas.
+
+![Demonstração do Encontre RPG](docs/demo.gif)
+
+**Site:** [encontre-rpg.vercel.app](https://encontre-rpg.vercel.app/)
+
+## Contexto
+
+Existem centenas de sistemas de RPG independentes, muitos gratuitos, mas a informação sobre eles está espalhada em fóruns, lojas como o itch.io e redes sociais. Por isso, jogadores acabam presos aos sistemas mais famosos, mestres têm dificuldade de reunir um grupo para testar algo novo, e autores independentes não chegam a quem procuraria por eles.
+
+O Encontre RPG reúne esses sistemas num catálogo com tags comparáveis (gênero, número de jogadores, duração) e divulga eventos onde é possível jogá-los.
 
 ## Status atual
 
-Em desenvolvimento ativo. Já implementado:
+| Funcionalidade                                                   | Status    |
+| ---------------------------------------------------------------- | --------- |
+| Catálogo de RPGs com tags, número de jogadores e duração         | Pronto    |
+| Página de eventos com destaques                                  | Pronto    |
+| Login com GitHub e com e-mail                                    | Pronto    |
+| Mestre publica evento, que fica pendente até a moderação aprovar | Planejado |
+| Jogador se inscreve num evento                                   | Planejado |
+| Chatbot que recomenda sistemas do catálogo (RAG)                 | Planejado |
 
-- Frontend em React + TypeScript com design responsivo
-- Integração com Supabase (Postgres) para catálogo e eventos
-- Autenticação via GitHub OAuth (Supabase Auth)
-- Deploy contínuo na Vercel
-
-Em breve: chatbot com RAG, submissão de eventos por usuários, área logada personalizada.
-
-## 🛠 Stack
+## Stack
 
 React, TypeScript, Vite, Tailwind CSS, Supabase (Postgres + Auth), Vercel
+
+## Decisões
+
+| Decisão                                   | Por quê                                                                                                       |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Supabase em vez de backend próprio        | Entrega banco, login social e regras de acesso sem manter servidor, e libera tempo para o produto.            |
+| Interface com dados falsos antes do banco | Validou navegação e layout cedo; os tipos criados viraram o contrato com o banco.                             |
+| RAG em vez de só um LLM                   | Um modelo genérico não conhece sistemas independentes pequenos; o RAG faz ele responder com base no catálogo. |
 
 ## Catálogo de RPGs com chatbot para auxílio
 
